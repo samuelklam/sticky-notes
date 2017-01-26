@@ -13,4 +13,4 @@ Production
 - Deploy on Heroku
 - Integrate Google Material Design
 - Integrate Postgres database to store information
-- Use frontend library such as React or Angular to allow for more easy data manipulation
+- Integrate frontend framework such as React or Angular
