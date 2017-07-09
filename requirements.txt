@@ -1,5 +1,17 @@
-To create postits:
-https://code.tutsplus.com/tutorials/create-a-sticky-note-effect-in-5-easy-steps-with-css3-and-html5--net-13934
+Post-it Designs:
+- https://code.tutsplus.com/tutorials/create-a-sticky-note-effect-in-5-easy-steps-with-css3-and-html5--net-13934
 
-List of TODO's if this were to be fully developed:
-- View README.md
+TODOS:
+- Implement create postit functionality with fields for title and body
+- Dragging and deletion of postits
+- Editing of postits
+- Past history versions (exact specifics will need to be fleshed out)
+- Information export
+- Postit customization for shape, color and size
+- Collaboration features across other users / friends
+
+Production
+- Deploy on Heroku
+- Integrate Google Material Design
+- Integrate Postgres database to store information
+- Integrate frontend framework such as React or Angular
