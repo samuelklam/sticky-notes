@@ -106,7 +106,7 @@ ul li:nth-child(5n) .postit-animation {
   top:-10px;
 }
 
-/* ul li .postit-animation:hover,ul li .postit-animation:focus {
+ul li .postit-animation:hover,ul li .postit-animation:focus {
   box-shadow:10px 10px 7px rgba(0,0,0,.7);
   -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
   -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
@@ -115,8 +115,8 @@ ul li:nth-child(5n) .postit-animation {
   -o-transform: scale(1.25);
   position:relative;
   z-index:5;
-} */
+}
 
 ol{text-align:center;}
 ol li{display:inline;padding-right:1em;}
-ol li .a{color:#fff;}
+ol li .postit-animation {color:#fff;}

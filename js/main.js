@@ -1,13 +1,13 @@
-import { uniqueId } from './utils.js';
+import { uniqueId, randColor } from './utils.js';
 
 let postits = [
-    createPostit("TODO#1", "Content #1", "postit_1"),
-    createPostit("TODO #2", "Content #2", "postit_2")
+    createPostit("TODO#1", "Content #1"),
+    createPostit("TODO #2", "Content #2")
 ];
 
 const renderPostit = (postit) => {
     return `<div class="postit" data-postit-id=${postit.uniqueId}>
-        <li>
+        <li style="color:${postit.color}">
             <div class="postit-animation">
                 <h2>${postit.title}</h2>
                 <p>${postit.content}</p>
@@ -38,16 +38,17 @@ const renderPostits = (postits) => {
 /**
  * Constructor to create a new postit
  */
-function createPostit(title, content, id = uniqueId()) {
+function createPostit(title, content, color = randColor(), id = uniqueId()) {
     return {
         uniqueId: id,
         title: title,
+        color: color,
         content: content
     };
 };
 
 /**
- * Creates a postit on the board
+ * Add a postit on the board
  */
 function addPostit(postits, postit) {
     postits.push(postit);
@@ -62,11 +63,15 @@ function deletePostit(postits, postitId) {
 }
 
 function initCreatePostitButton() {
-    let createPostitForm = document.querySelector('button')
-    createPostitForm.addEventListener("click", function(e) {
-        let localState = (localStorage.getItem('postits'));
+    let newPostit = document.querySelector('button')
+    newPostit.addEventListener("click", function(e) {
+        let localState = localStorage.getItem('postits');
         postits = (postits === null) ? [] : JSON.parse(localState);
-        let newPostit = createPostit("TITLE", "CONTENT", uniqueId())
+
+        let title = prompt("Please enter a title for the postit");
+        let content = prompt("Please enter the content for the postit");
+        let newPostit = createPostit(title, content);
+
         addPostit(postits, newPostit);
     });
 }

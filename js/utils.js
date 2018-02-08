@@ -14,6 +14,11 @@ export let uniqueId = (prefix) => {
 	return (prefix ? prefix + id	: id);
 };
 
+export let randColor = () => {
+  let colors = ['blue', 'red', 'green'];
+  return colors[Math.floor(Math.random() * colors.length)];
+}
+
 
 // return time elapsed 
 export let timespan = (date)=>{
